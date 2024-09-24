@@ -1,0 +1,28 @@
+version: '3.3'
+
+services:
+  laboratorio2020_database:
+    image: blancofrancisco/mysql_laboratorio2022
+    ports:
+      - "3306:3306"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: jyaa2022_usr1
+      MYSQL_PASSWORD: jyaa2022_pwd1
+      MYSQL_DATABASE: jyaa2022_bd1  
+  laboratorio2020_app:
+    image: blancofrancisco/backend_laboratorio2022
+    restart: always
+    links:
+      - laboratorio2020_database
+    ports:
+      - "80:8080"
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    environment:
+        PMA_HOST: laboratorio2020_database
+        PMA_PORT: 3306
+    ports:
+      - 90:80

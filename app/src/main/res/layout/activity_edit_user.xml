@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="onClick">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".EditUser">
+
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Datos de usuario"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="Nombre"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/titulo" />
+
+        <EditText
+            android:id="@+id/name_input"
+            android:layout_width="180dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="4dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="@+id/name_text"
+            app:layout_constraintTop_toBottomOf="@+id/name_text" />
+
+        <TextView
+            android:id="@+id/surname_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Apellido"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/name_input"
+            app:layout_constraintTop_toTopOf="@+id/name_text" />
+
+        <EditText
+            android:id="@+id/surname_input"
+            android:layout_width="180dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="4dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            app:layout_constraintStart_toStartOf="@+id/surname_text"
+            app:layout_constraintTop_toBottomOf="@+id/surname_text" />
+
+        <TextView
+            android:id="@+id/address_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Dirección"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/name_text"
+            app:layout_constraintTop_toBottomOf="@id/name_input" />
+
+        <EditText
+            android:id="@+id/address_input"
+            android:layout_width="180dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="4dp"
+            android:ems="10"
+            android:inputType="textPostalAddress"
+            app:layout_constraintStart_toStartOf="@+id/address_text"
+            app:layout_constraintTop_toBottomOf="@+id/address_text" />
+
+        <TextView
+            android:id="@+id/email_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Email"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/address_input"
+            app:layout_constraintTop_toTopOf="@+id/address_text" />
+
+        <EditText
+            android:id="@+id/email_input"
+            android:layout_width="180dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="4dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            app:layout_constraintStart_toStartOf="@+id/email_text"
+            app:layout_constraintTop_toBottomOf="@+id/email_text" />
+
+        <TextView
+            android:id="@+id/username_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Nombre de usuario"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/address_text"
+            app:layout_constraintTop_toBottomOf="@id/address_input" />
+
+        <EditText
+            android:id="@+id/username_input"
+            android:layout_width="180dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="4dp"
+            android:ems="10"
+            android:inputType="text"
+            app:layout_constraintStart_toStartOf="@+id/username_text"
+            app:layout_constraintTop_toBottomOf="@+id/username_text" />
+
+        <TextView
+            android:id="@+id/password_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Contraseña"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/username_input"
+            app:layout_constraintTop_toTopOf="@+id/username_text" />
+
+        <EditText
+            android:id="@+id/password_input"
+            android:layout_width="180dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="4dp"
+            android:ems="10"
+            android:inputType="text"
+            app:layout_constraintStart_toStartOf="@+id/password_text"
+            app:layout_constraintTop_toBottomOf="@+id/password_text" />
+
+        <TextView
+            android:id="@+id/role_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Rol"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/username_input"
+            app:layout_constraintTop_toBottomOf="@+id/username_input" />
+
+        <Spinner
+            android:id="@+id/role_spinner"
+            android:layout_width="180dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="@+id/role_text"
+            app:layout_constraintTop_toBottomOf="@+id/role_text" />
+
+        <Button
+            android:id="@+id/button_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginRight="70dp"
+            android:backgroundTint="#009688"
+            android:onClick="saveChanges"
+            android:text="Guardar"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@id/button_delete"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/role_spinner" />
+
+        <Button
+            android:id="@+id/button_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="70dp"
+            android:backgroundTint="#BC0000"
+            android:onClick="deleteUser"
+            android:text="Eliminar"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/button_save"
+            app:layout_constraintTop_toBottomOf="@+id/role_spinner" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

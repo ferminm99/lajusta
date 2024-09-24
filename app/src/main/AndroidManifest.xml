@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light"
+        tools:targetApi="31">
+        <activity
+            android:name=".LogIn"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+        <activity
+            android:name=".VerBolson"
+            android:parentActivityName=".Bolsones" />
+        <activity
+            android:name=".CrearParcela"
+            android:parentActivityName=".CrearVisita" />
+        <activity
+            android:name=".VerParcela" />
+        <activity
+            android:name=".CrearVisita"
+            android:parentActivityName=".Visitas" />
+        <activity
+            android:name=".VerVisita"
+            android:parentActivityName=".Visitas" />
+        <activity
+            android:name=".Verduras"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Usuarios"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".FamiliasProductoras"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".VerFamiliaProductora"
+            android:parentActivityName=".FamiliasProductoras" />
+        <activity
+            android:name=".CrearFamiliaProductora"
+            android:parentActivityName=".FamiliasProductoras" />
+        <activity
+            android:name=".Rondas"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".CrearRuta"
+            android:parentActivityName=".Quintas" />
+        <activity
+            android:name=".VerRonda"
+            android:parentActivityName=".Rondas" />
+        <activity
+            android:name=".CrearRonda"
+            android:parentActivityName=".Rondas" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+        <activity
+            android:name=".Quintas"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".VerQuinta"
+            android:parentActivityName=".Quintas" />
+        <activity
+            android:name=".CrearQuinta"
+            android:parentActivityName=".Quintas" />
+        <activity
+            android:name=".MapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CrearVerdura"
+            android:parentActivityName=".Verduras" />
+        <activity
+            android:name=".VerVerdura"
+            android:parentActivityName=".Verduras" />
+        <activity
+            android:name=".Visitas"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Bolsones"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".CrearBolson"
+            android:parentActivityName=".Bolsones" />
+        <activity
+            android:name=".EditUser"
+            android:parentActivityName=".Usuarios">
+        </activity>
+        <activity
+            android:name=".CreateUser"
+            android:parentActivityName=".Usuarios">
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
